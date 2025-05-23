@@ -1,22 +1,36 @@
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-imp
+import HomePage from './pages/Home';
+import NotFoundPage from './pages/NotFound';
+import PostDetailPage from './pages/PostDetail';
+import RootLayout from './routes/Root';
+
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
-    errorElement: <ErrorPage />
+    element: <RootLayout />,
+    errorElement: <NotFoundPage />,
+    children: [
+      {
+        index: 'home',
+        element: <HomePage />,
+        children: [
+          {
+            path: 'post/:id',
+            element: <PostDetailPage />
+          }
+        ]
+      }
+    ]
   }
 
 ])
 export default function App() {
 
-
   return (
 
-    <Router router={router} />
-
+    <RouterProvider router={router} />
   )
 }
 

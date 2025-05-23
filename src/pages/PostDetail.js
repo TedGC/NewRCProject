@@ -1,15 +1,12 @@
 
 
 
-
-
-
-
-
 export default function PostDetailPage() {
 
 
     return (
-        <h1>PostDetailPage </h1>
+        <div>
+            <h1> PostDetails</h1>
+        </div>
     )
 }
