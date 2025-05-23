@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        index: 'home',
+        index: true,
         element: <HomePage />,
         children: [
           {
-            path: 'post/:id',
+            path: '/post',
             element: <PostDetailPage />
           }
         ]

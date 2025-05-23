@@ -23,12 +23,12 @@ export default function NavBar() {
                     </li>
                     <li>
                         <NavLink
-                            to="/postdetail"
+                            to="/post"
                             className={({ isActive }) =>
                                 isActive ? classes.active : undefined
                             }
                         >
-                            Events
+                            Post
                         </NavLink>
                     </li>
                     {/* <li>
@@ -43,7 +43,6 @@ export default function NavBar() {
                     </li> */}
                 </ul>
             </nav>
-            <PostDetailPage />
         </header>
     );
 }
