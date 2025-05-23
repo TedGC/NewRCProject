@@ -1,5 +1,5 @@
 
-import PostDetailPage from '../pages/PostDetail';
+
 import classes from './NavBar.module.css'
 import { NavLink } from 'react-router-dom'
 
@@ -31,16 +31,6 @@ export default function NavBar() {
                             Post
                         </NavLink>
                     </li>
-                    {/* <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                isActive ? classes.active : undefined
-                            }
-                        >
-                            Newsletter
-                        </NavLink>
-                    </li> */}
                 </ul>
             </nav>
         </header>

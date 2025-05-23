@@ -4,7 +4,7 @@ import HomePage from './pages/Home';
 import NotFoundPage from './pages/NotFound';
 import PostDetailPage from './pages/PostDetail';
 import RootLayout from './routes/Root';
-
+import PostLayout from './routes/PostRoot';
 
 const router = createBrowserRouter([
   {
@@ -15,13 +15,19 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: 'post',
+        element: <PostLayout />,
         children: [
           {
-            path: '/post',
+            path: 'posts',
             element: <PostDetailPage />
           }
         ]
       }
+
+
     ]
   }
 
